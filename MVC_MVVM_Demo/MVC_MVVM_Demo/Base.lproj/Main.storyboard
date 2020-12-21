@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVC_MVVM_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="HRZ-Fh-lgb">
+                                <rect key="frame" x="128.5" y="433" width="157" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWa-mr-nQO">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="MVC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="6Pp-ae-e3f" kind="show" id="IQh-0I-FOz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-7A-GQE">
+                                        <rect key="frame" x="111" y="0.0" width="46" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="MVVM">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="GMW-7p-ccd" kind="show" id="Sa6-fm-lqk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bc5-7A-GQE" firstAttribute="width" secondItem="FWa-mr-nQO" secondAttribute="width" id="c5r-tS-IKz"/>
+                                    <constraint firstItem="bc5-7A-GQE" firstAttribute="height" secondItem="FWa-mr-nQO" secondAttribute="height" id="kgJ-bJ-Le0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HRZ-Fh-lgb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GRS-Y5-SMk"/>
+                            <constraint firstItem="HRZ-Fh-lgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ndq-5W-m8H"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="71.651785714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nWf-EY-AHV">
+            <objects>
+                <viewController id="6Pp-ae-e3f" customClass="MVCViewController" customModule="MVC_MVVM_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QDg-7z-s3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-Ba-IQ9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XQw-vT-F0L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q4h-Ba-IQ9" firstAttribute="top" secondItem="XQw-vT-F0L" secondAttribute="top" id="cLC-qk-0B7"/>
+                            <constraint firstAttribute="bottom" secondItem="Q4h-Ba-IQ9" secondAttribute="bottom" id="s5t-pU-5Nf"/>
+                            <constraint firstItem="Q4h-Ba-IQ9" firstAttribute="leading" secondItem="XQw-vT-F0L" secondAttribute="leading" id="w4b-lI-Rh9"/>
+                            <constraint firstItem="Q4h-Ba-IQ9" firstAttribute="trailing" secondItem="XQw-vT-F0L" secondAttribute="trailing" id="y2T-Gj-Ul4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T16-uP-5MK"/>
+                    <connections>
+                        <outlet property="mvcTableView" destination="Q4h-Ba-IQ9" id="KSh-hh-9qO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CqJ-Fg-iIG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="-220.3125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gqb-Cb-CV9">
+            <objects>
+                <viewController id="GMW-7p-ccd" customClass="MVVMViewController" customModule="MVC_MVVM_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I2i-AG-q4w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGL-rr-lVI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KqS-q4-TRT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LGL-rr-lVI" firstAttribute="leading" secondItem="KqS-q4-TRT" secondAttribute="leading" id="a2x-ug-jTy"/>
+                            <constraint firstItem="LGL-rr-lVI" firstAttribute="trailing" secondItem="KqS-q4-TRT" secondAttribute="trailing" id="gbS-Sd-88r"/>
+                            <constraint firstAttribute="bottom" secondItem="LGL-rr-lVI" secondAttribute="bottom" id="hMw-hg-Uko"/>
+                            <constraint firstItem="LGL-rr-lVI" firstAttribute="top" secondItem="KqS-q4-TRT" secondAttribute="top" id="rO1-S7-3eX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jg3-Qr-Jdh"/>
+                    <connections>
+                        <outlet property="mvvmTableView" destination="LGL-rr-lVI" id="D1z-6g-gOr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5b-iM-1jH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
